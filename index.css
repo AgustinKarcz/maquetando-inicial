@@ -1,0 +1,445 @@
+/* === RESET === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #ffffff;
+  display: block;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.intro {
+  width: 100%;
+  min-height: 60vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+/* === FONDO PATRÓN === */
+.intro::before {
+  content: "";
+  position: absolute;
+  background-image: radial-gradient(circle, #cccccc 2px, transparent 2px);
+  background-size: 20px 20px;
+  transform: rotate(23deg);
+  z-index: -1;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  pointer-events: none;
+}
+@media (min-width: 769px) {
+  .intro::before {
+    width: 350%;
+    height: 450%;
+    top: -55%;
+    left: -35%;
+  }
+}
+
+/* === HEADER === */
+.header {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  padding: 1rem;
+}
+
+/* === CONTENEDOR FLEXIBLE DEL HEADER === */
+.contenedor-de-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* === IMAGENES EN HEADER === */
+.img-header {
+  height: auto;
+  max-width: 22%;
+}
+@media (min-width: 769px) {
+  .img-header {
+    max-width: 95px;
+  }
+}
+
+/* === BOTONES DEL HEADER === */
+.boton-header {
+  width: 16%;
+  height: auto;
+  max-height: 50px;
+  border: none;
+}
+@media (min-width: 769px) {
+  .boton-header {
+    display: none;
+  }
+}
+.img-del-boton {
+  max-height: 24px;
+  max-width: 24px;
+}
+.boton-transformado {
+  display: none;
+}
+@media (min-width: 769px) {
+  .boton-transformado {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.a-header {
+  display: none;
+}
+@media (min-width: 769px) {
+  .a-header {
+    display: flex;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    color: #141414;
+    text-decoration: none;
+    margin-right: 20%;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+}
+
+/* === CONTENEDOR DE INTRO === */
+.contenedor-de-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media (min-width: 769px) {
+  .contenedor-de-intro {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5%;
+  }
+}
+
+/* === SECCIÓN TÍTULO Y FOTO === */
+.titulo-y-foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  padding: 2rem 1rem;
+}
+@media (min-width: 769px) {
+  .titulo-y-foto {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* === TÍTULO PRINCIPAL === */
+.titulo-principal {
+  font-family: "Open Sans";
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  max-width: 300px;
+  margin: 1rem;
+}
+@media (min-width: 769px) {
+  .titulo-principal {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+/* === IMAGEN DE PERFIL === */
+.mi-foto {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+@media (min-width: 769px) {
+  .mi-foto {
+    max-width: 400px;
+  }
+}
+
+/* === SECCIÓN SOY AGUSTIN === */
+.soy-agustin {
+  background-color: #141414;
+  width: 100%;
+  max-width: 1440px;
+  padding: 3rem;
+  text-align: center;
+}
+@media (min-width: 769px) {
+  .soy-agustin {
+    height: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10% 20%;
+  }
+}
+.contenedor-soy-agustin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 769px) {
+  .contenedor-soy-agustin {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+.texto-y-titulo {
+  display: flex;
+  flex-direction: column;
+}
+.titleh2 {
+  font-family: "Open Sans";
+  font-size: 32px;
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.text-soy-agustin {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: white;
+  margin-top: 41px;
+  margin-bottom: 57px;
+  text-align: left;
+}
+.img-check {
+  max-width: 80px;
+  max-height: 80px;
+  height: 100%;
+  width: 100%;
+}
+
+/* === SECCIÓN SERVICIOS === */
+.mis-servicios {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1440px;
+  padding: 4rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 769px) {
+  .mis-servicios {
+    min-height: 60vh;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    gap: 40px;
+  }
+}
+
+.contenedor-principal-servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 104px;
+}
+@media (min-width: 769px) {
+  .contenedor-principal-servicios {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+.contenedor-servicios {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.img-servicios {
+  width: 138px;
+  height: 138px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-servicios {
+  font-family: "Roboto";
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* === SECCIÓN CONTACTO === */
+.contacto {
+  width: 100%;
+  max-width: 1440px;
+  padding: 3rem;
+  background-color: #141414;
+  text-align: center;
+}
+@media (min-width: 769px) {
+  .contacto {
+    min-height: 70vh;
+    height: 100%;
+    width: 100%;
+    padding: 4rem 7rem;
+    gap: 40px;
+  }
+}
+@media (min-width: 769px) {
+  .contenedor-contacto {
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+.title--blanco {
+  text-align: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-family: "Open Sans";
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+@media (min-width: 769px) {
+  .formulario {
+    width: 100%;
+    gap: 0.1rem;
+    height: 100%;
+  }
+}
+.contacto-campos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  width: 100%;
+  max-width: 100%;
+  height: 70%;
+  background-color: yellow;
+  margin-top: 2em;
+}
+label {
+  font-family: "Roboto";
+  font-size: 13px;
+  color: white;
+  text-align: left;
+}
+input,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  padding: 1rem;
+}
+input {
+  min-height: 20%;
+}
+textarea {
+  min-height: 70%;
+  height: 100%;
+}
+/* === FOOTER === */
+footer {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  max-width: 1440px;
+  padding: 53px 21px 113px 21px;
+}
+
+.contenedor-de-footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+@media (min-width: 769px) {
+  .contenedor-de-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 769px) {
+  .contenedor-logo-copy {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.contenedor-footer-redes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  gap: 1rem;
+}
+
+.logos-redes {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 769px) {
+  small {
+    text-align: center;
+  }
+}
+a {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-decoration: none;
+  color: black;
+}
